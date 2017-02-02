@@ -34,7 +34,7 @@ def formatting(old_tune):
                 elif low > high:
                     new_tune = new_tune + i + ')' * (low - high)
                 elif low < high:
-                    new_tune = new_tune + i + ']' * (low - high)
+                    new_tune = new_tune + i + ']' * (high - low)
                 else:
                     return 'error'
                 sharped = False
@@ -44,7 +44,7 @@ def formatting(old_tune):
                 elif low > high:
                     new_tune = new_tune + '(' * (low - high) + i + ')' * (low - high)
                 elif low < high:
-                    new_tune = new_tune + '[' * (high - low) + i + ']' * (low - high)
+                    new_tune = new_tune + '[' * (high - low) + i + ']' * (high - low)
                 else:
                     return 'error'
     print(new_tune)
